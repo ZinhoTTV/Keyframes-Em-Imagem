@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .earth {
+    width: 300px;
+    display:inline-block;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+    position:relative;
+    }
+    .earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+    }
+    .earth::before {
+    content: "";
+    display: block;
+    width: 400%;
+    padding-top:100%;
+    animation: spin 8s linear infinite;
+    background: url(https://github.com/BHouwens/SolarSim/blob/master/images/earthmap1k.jpg?raw=true);
+    background-size: auto 100%;
+    }
+
+    @keyframes spin {
+    to {
+        transform: translateX(-50%);
+    }
+    }
+
+</style>
+
+</head>
+<body>
+    <audio autoplay="autoplay" controls="controls">
+        <source src="Gravação (2).mp4.m4a" type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+
+    <div class="earth">
+    </div>
+    
+    <div class="earth" style="width:200px">
+    </div>
+    
+    <div class="earth" style="width:100px">
+    </div>
+    
+</body>
+</html>
